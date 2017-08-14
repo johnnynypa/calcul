@@ -5,8 +5,6 @@ import {
     TextInput
 } from 'react-native';
 import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as counterActions from '../redux/actions/operacion';
 
 import Style from '../styles';
 
@@ -28,8 +26,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators(counterActions, dispatch)
-  });
-
-export default connect(mapStateToProps, mapDispatchToProps)(Resultado);
+export default connect(mapStateToProps)(Resultado);

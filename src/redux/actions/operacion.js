@@ -13,8 +13,3 @@ export function write(e) {
   };
 }
 
-export function result() {
-  return {
-    type: types.RESULT
-  };
-}

@@ -4,7 +4,7 @@ const initialState = {
   resultado: '0'
 };
 
-export default function counter(state = initialState, action = {}) {
+export default function showResult(state = initialState, action = {}) {
   switch (action.type) {
     case types.RESULT:
       return {
