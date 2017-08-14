@@ -1,13 +1,20 @@
 import * as types from './actionsTypes';
 
-export function increment() {
+export function clear() {
   return {
-    type: types.INCREMENT
+    type: types.CLEAR
   };
 }
 
-export function decrement() {
+export function write(e) {
   return {
-    type: types.DECREMENT
+    type: types.WRITE,
+    element: e
+  };
+}
+
+export function result() {
+  return {
+    type: types.RESULT
   };
 }

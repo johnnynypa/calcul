@@ -1,20 +1,15 @@
 import * as types from '../actions/actionsTypes';
 
 const initialState = {
-  operacion: '0'
+  resultado: '0'
 };
 
 export default function counter(state = initialState, action = {}) {
   switch (action.type) {
-    case types.WRITE:
+    case types.RESULT:
       return {
         ...state,
-        operacion: toString(state.operacion) + toString(action.element)
-      };
-    case types.CLEAR:
-      return {
-        ...state,
-        operacion: '0'
+        resultado: "hola"
       };
     default:
       return state;

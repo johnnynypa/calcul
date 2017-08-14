@@ -15,7 +15,7 @@ class Resultado extends Component{
         return(
             <View style={Style.resultado} >
                 <Text style={Style.resultadoText} >
-                    {/* {this.props.resultado} */}
+                     {this.props.state.resultado} 
                 </Text>
             </View>
         )
