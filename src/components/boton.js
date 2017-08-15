@@ -3,13 +3,14 @@ import {
 	Text,
 	View,
 	TextInput,
-	TouchableHighlight,
 	TouchableOpacity
 } from 'react-native';
 import Style from '../styles';
-import { write } from '../redux/actions/operacion';
 
-export default class Boton extends Component {
+import { connect } from 'react-redux';
+
+
+class Boton extends Component {
 	constructor(props) {
 		super(props)
 	}
@@ -22,9 +23,6 @@ export default class Boton extends Component {
 						(this.props.type == 'num') ? Style.num : Style.op
 					]
 
-				}
-				onPress={
-					(this.props.action === write) ? this.props.action(this.props.text) : this.props.action
 				}
 			>
 				<View>
@@ -43,3 +41,6 @@ export default class Boton extends Component {
 		)
 	}
 }
+
+
+export default connect()(Boton);

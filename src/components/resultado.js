@@ -2,18 +2,24 @@ import React, { Component } from 'react';
 import {
     Text,
     View,
-    TextInput
+    TextInput,
+    Alert
 } from 'react-native';
 import { connect } from 'react-redux';
 
 import Style from '../styles';
 
 class Resultado extends Component{
+    constructor(props){
+        super(props)
+    }
+    
     render(){
+        Alert.alert('prueba', JSON.stringify(this.props))
         return(
             <View style={Style.resultado} >
                 <Text style={Style.resultadoText} >
-                     {this.props.state.resultado} 
+                      {this.props.state.resultado}  
                 </Text>
             </View>
         )
@@ -22,7 +28,7 @@ class Resultado extends Component{
 
 const mapStateToProps = (state) =>{
     return {
-        state: state.resultado
+        state: state.data
     }
 }
 

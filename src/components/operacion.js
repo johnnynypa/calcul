@@ -4,15 +4,13 @@ import {
     View,
     TextInput
 } from 'react-native';
-import {bindActionCreators} from 'redux';
-import * as counterActions from '../redux/actions/operacion';
 import { connect } from 'react-redux';
 
 import Style from '../styles';
 
 class Operacion extends Component{
     render(){
-        const { state, actions } = this.props;
+        const { state} = this.props;
         return(
             <View style={Style.operacion} >
                 <Text style={Style.operacionText} >
@@ -25,12 +23,8 @@ class Operacion extends Component{
 
 const mapStateToProps = (state) =>{
     return {
-        state: state.operacion
+        state: state.data
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators(counterActions, dispatch)
-  });
-
-export default connect(mapStateToProps, mapDispatchToProps)(Operacion);
+export default connect(mapStateToProps)(Operacion);
