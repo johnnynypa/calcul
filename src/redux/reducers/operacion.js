@@ -1,8 +1,8 @@
 import * as types from '../actions/actionsTypes';
 
 const initialState = {
-  operacion: '0',
-  resultado: '0'
+  operacion: '3',
+  resultado: '4'
 };
 
 export default (state = initialState, action = {}) => {
@@ -10,12 +10,12 @@ export default (state = initialState, action = {}) => {
     case types.WRITE:
       return {
         ...state,
-        operacion: toString(state.operacion) + toString(action.element)
+        operacion: state.operacion+action.element
       };
     case types.CLEAR:
       return {
-        ...state,
         operacion: '0',
+        resultado: '0'
       };
     case types.RESULT:
       return {

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {
     Text,
     View,
-    TextInput,
-    Alert
+    TextInput
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -15,7 +14,6 @@ class Resultado extends Component{
     }
     
     render(){
-        Alert.alert('prueba', JSON.stringify(this.props))
         return(
             <View style={Style.resultado} >
                 <Text style={Style.resultadoText} >

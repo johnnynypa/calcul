@@ -15,34 +15,34 @@ class Dashboard extends Component {
         return (
             <View style={Style.table} >
                 <View style={Style.rowButtons}>
-                    <Boton type='op' text="AC" />
-                    <Boton type='op' text="√" />
-                    <Boton type='op' text="%" />
-                    <Boton type='op' text="/" />
+                    <Boton onPress="CLEAR" type='op' text="AC" />
+                    <Boton onPress="WRITE" type='op' text="√" />
+                    <Boton onPress="WRITE" type='op' text="%" />
+                    <Boton onPress="WRITE" type='op' text="/" />
                 </View>
                 <View style={Style.rowButtons}>
-                    <Boton type='num' text="7" />
-                    <Boton type='num' text="8" />
-                    <Boton type='num' text="9" />
-                    <Boton type='op' text="*" />
+                    <Boton onPress="WRITE" type='num' text="7" />
+                    <Boton onPress="WRITE" type='num' text="8" />
+                    <Boton onPress="WRITE" type='num' text="9" />
+                    <Boton onPress="WRITE" type='op' text="*" />
                 </View>
                 <View style={Style.rowButtons}>
-                    <Boton type='num' text="4" />
-                    <Boton type='num' text="5" />
-                    <Boton type='num' text="6" />
-                    <Boton type='op' text="-" />
+                    <Boton onPress="WRITE" type='num' text="4" />
+                    <Boton onPress="WRITE" type='num' text="5" />
+                    <Boton onPress="WRITE" type='num' text="6" />
+                    <Boton onPress="WRITE" type='op' text="-" />
                 </View>
                 <View style={Style.rowButtons}>
-                    <Boton type='num' text="1" />
-                    <Boton type='num' text="2" />
-                    <Boton type='num' text="3" />
-                    <Boton type='op' text="+" />
+                    <Boton onPress="WRITE" type='num' text="1" />
+                    <Boton onPress="WRITE" type='num' text="2" />
+                    <Boton onPress="WRITE" type='num' text="3" />
+                    <Boton onPress="WRITE" type='op' text="+" />
                 </View>
                 <View style={Style.rowButtons}>
-                    <Boton type='num' text="0" />
-                    <Boton type='num' text="00" />
-                    <Boton type='num' text="." />
-                    <Boton type='op' text="=" />
+                    <Boton onPress="WRITE" type='num' text="0" />
+                    <Boton onPress="WRITE" type='num' text="00" />
+                    <Boton onPress="WRITE" type='num' text="." />
+                    <Boton onPress="RESULT" type='op' text="=" />
                 </View>
             </View>
         );
